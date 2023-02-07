@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: paypal-service
+  name: paypal-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: paypal-service
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: paypal-service
+    spec:
+      containers:
+      - image: xocbayar/paypal-service
+        name: paypal-service
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: paypal-service
+  name: paypal-service
+spec:
+  ports:
+  - name: 9002-9002
+    port: 9002
+    protocol: TCP
+    targetPort: 9002
+  selector:
+    app: paypal-service
+  type: LoadBalancer
+status:
+  loadBalancer: {}

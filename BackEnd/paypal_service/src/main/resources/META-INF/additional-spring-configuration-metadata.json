@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "subo8.app.jwtSecret",
+      "type": "java.lang.String",
+      "description": "Description for subo8.app.jwtSecret."
+  }
+] }

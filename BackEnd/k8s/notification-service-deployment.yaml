@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: notification-service
+  name: notification-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notification-service
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: notification-service
+    spec:
+      containers:
+      - image: samueletedocker/notification-service:2.0
+        name: notification-service
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: notification-service
+  name: notification-service
+spec:
+  ports:
+  - name: 8110-8110
+    port: 8110
+    protocol: TCP
+    targetPort: 8110
+  selector:
+    app: notification-service
+  type: LoadBalancer
+status:
+  loadBalancer: {}

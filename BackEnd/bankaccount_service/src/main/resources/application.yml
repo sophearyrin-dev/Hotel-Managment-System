@@ -1,0 +1,35 @@
+#server:
+#  port: 9003
+##bankaccount:
+##  service:
+##    key: bankaccount-service
+#spring:
+#  application:
+#    name: BANKACCOUNT-SERVICE
+#  datasource:
+#    # url: jdbc:h2:mem:bankaccount-db
+#    url: jdbc:h2:mem:BankAccountDb
+#    username: sa
+#    password:
+#    driverClassName: org.h2.Driver
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    hikari:
+#      initialization-fail-timeout: 0
+#
+#    generate-ddl: true
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create
+#
+#
+
+#eureka:
+#  instance:
+#    preferIpAddress: true
+#    hostname: eureka-0
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka

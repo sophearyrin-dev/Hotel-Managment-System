@@ -1,0 +1,314 @@
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.nav-custom {
+  background-color: #397aeb;
+}
+
+#try {
+  color: #fff;
+}
+#container {
+  background-image: url(/public/aman-CP3kqxiDlwY-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+#signup {
+  background-image: url(/public/austin-distel-jpHw8ndwJ_Q-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+/* #image-div {
+ margin-top: 50px;
+} */
+#back {
+  color: #fff;
+  padding-top: 100px;
+  padding-left: 70px;
+}
+#account {
+  color: #235cbd;
+  font-family: "Avenir";
+  font-size: 1.3rem;
+  padding-top: 40px;
+  font-style: "italic";
+  margin-left: 370px;
+  text-align:center;
+}
+#booking {
+  background-color: #5886d4;
+  height: auto;
+}
+#rooms-div {
+  background-color: #5886d4;
+}
+#reservations {
+  background-color: #5886d4;
+  height: 100vh;
+
+}
+.welcome {
+  font-family: Avenir;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0em;
+  /* text-align: center; */
+  color: #fff;
+  padding-top: 20px;
+  
+}
+.reserve {
+  font-family: Avenir;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
+  /* padding-top: 90px; */
+}
+.rights {
+  font-family: Avenir;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
+  padding-top: 400px;
+}
+#signup-form {
+  font-style: italic;
+  font-family: Avenir;
+  color: #fff;
+  background-color: #235cbd;
+  left: 47px;
+  top: 88px;
+  border-radius: 8px;
+  margin-top: 10px;
+  /* margin-left: 40px; */
+  padding: 10px;
+}
+#login-form {
+  font-style: italic;
+  font-family: Avenir;
+  color: #fff;
+  background-color: #a99a93;
+  height: 583px;
+  width: 431px;
+  left: 47px;
+  top: 88px;
+  border-radius: 8px;
+  margin-top: 100px;
+  margin-left: 40px;
+  padding: 10px;
+}
+#booking-form {
+  font-style: italic;
+  font-family: Avenir;
+  color: #fff;
+  background-color: #235cbd;
+  /* height: 583px; */
+  /* width: 431px; */
+  left: 47px;
+  top: 88px;
+  border-radius: 8px;
+
+  margin-left: 40px;
+  padding: 10px;
+}
+#room-form {
+  font-style: italic;
+  font-family: Avenir;
+  color: #fff;
+  background-color: #235cbd;
+  /* height: 583px; */
+  /* width: 431px; */
+  left: 47px;
+  
+  border-radius: 8px;
+  
+  margin-left: 40px;
+  padding: 10px;
+}
+#button {
+  background-color: #0037fd;
+  color: #fff;
+  border: none;
+  width: 100%;
+  font-style: italic;
+}
+#signupp {
+  font-family: Avenir;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 49px;
+  letter-spacing: 0em;
+  color: #235cbd;
+  padding-top: 90px;
+  text-align: center;
+}
+#Loginn {
+  font-family: "Avenir";
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 49px;
+  letter-spacing: 0em;
+  color:#235cbd;
+  padding-top: 90px;
+  text-align: center;
+}
+#have-account-sign{
+
+  font-family: "Avenir";
+  font-style: "italic";
+  font-size: 1.3rem;
+  padding-top: 130px;
+  text-align: center;
+  color: #235cbd;
+}
+#have-account{
+  color: #235cbd;
+  font-family: "Avenir";
+  font-style: "italic";
+  font-size: 1.3rem;
+  padding-top: 150px;
+  text-align: center;
+}
+#reserve-image{
+  height: "200px";
+  margin: "0 auto";
+  /* display: "block"; */
+  height:"100px";
+  width:"100px";
+}
+@media only screen and (max-width:765px){
+  #container {
+    background-image: url(/public/hotel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+  .welcome {
+    font-family: Avenir;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    /* padding-top: 20px; */
+    
+  }
+  .reserve {
+    font-family: Avenir;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    padding-top: 10px;
+  }
+  .rights {
+    font-family: Avenir;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    padding-top: 160px;
+  }
+  #signup-form {
+    font-style: italic;
+    font-family: Avenir;
+    color: #fff;
+    background-color: #a99a93;
+    left: 47px;
+    top: 88px;
+    border-radius: 8px;
+    margin-top: 10px;
+    /* margin-left: 40px; */
+    padding: 10px;
+  }
+  #login-form {
+    font-style: italic;
+    font-family: "Avenir";
+    color: #fff;
+    background-color: #a99a93;
+    left: 47px;
+    top: 88px;
+    border-radius: 8px;
+    margin-top: 10px;
+  
+    padding: 10px;
+  }
+  #signupp {
+    font-family: Avenir;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 49px;
+    letter-spacing: 0em;
+    color: rgb(255, 255, 255);
+    padding-top: 50px;
+    text-align: center;
+  }
+  #have-account-sign{
+    color: #235cbd;
+    font-family: "Avenir";
+    font-style: "italic";
+    font-size: 1.3rem;
+    padding-top: 10px;
+    text-align: center;
+  
+  }
+  #account{
+    color: #235cbd;
+    font-family: "Avenir";
+    font-style: "italic";
+    font-size: 1.3rem;
+    padding-top: 20px;
+    text-align: center;
+   
+  }
+  #reserve-image{
+    height: "200px";
+    margin: "0 auto";
+    /* display: "block"; */
+    height:"100px";
+    width:"100px";
+  }
+  #Loginn {
+    font-family: "Avenir";
+    font-size: 1.7rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 49px;
+    letter-spacing: 0em;
+    color: #fff;
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */

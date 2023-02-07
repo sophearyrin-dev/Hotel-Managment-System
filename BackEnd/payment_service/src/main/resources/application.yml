@@ -1,0 +1,14 @@
+server:
+  port: 9004
+
+spring:
+  application:
+    name: payment-service
+    data:
+      mongodb:
+        uri: mongodb://root:secretpassword@hotel-mongodb.default.svc.cluster.local:27017/paypal_DB?authSource=admin
+  # data:
+  #   mongodb:
+  #     host: localhost
+  #     port: 27017
+  #     database: PaymentInformation

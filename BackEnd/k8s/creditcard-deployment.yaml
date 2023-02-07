@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: credit-service
+  name: credit-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: credit-service
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: credit-service
+    spec:
+      containers:
+      - image: xocbayar/creditcard-service
+        name: credit-service
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: credit-service
+  name: credit-service
+spec:
+  ports:
+  - name: 9001-9001
+    port: 9001
+    protocol: TCP
+    targetPort: 9001
+  selector:
+    app: credit-service
+  type: LoadBalancer
+status:
+  loadBalancer: {}

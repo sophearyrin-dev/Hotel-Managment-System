@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: apigateway
+  name: apigateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apigateway
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: apigateway
+    spec:
+      containers:
+      - image: xocbayar/apigateway
+        name: apigateway
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: apigateway
+  name: apigateway
+spec:
+  ports:
+  - name: 8762-8762
+    port: 8762
+    protocol: TCP
+    targetPort: 8762
+  selector:
+    app: apigateway
+  type: LoadBalancer
+status:
+  loadBalancer: {}

@@ -1,0 +1,71 @@
+# Define a 'Service' To Expose the application
+apiVersion: v1
+kind: Service
+metadata:
+  name: notification
+spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 8110
+      targetPort: 8110
+      nodePort: 30191
+  selector:
+    app: notification
+---
+# Config server deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification
+spec:
+  selector:
+    matchLabels:
+      app: notification
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: notification
+    spec:
+      containers:
+        - name: notification
+          image: samueletedocker/notification-service:1.0
+          env:
+            - name: SPRING_APPLICATION_JSON
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-config
+                  key: dev-config.json
+            - name: MONGO_INITDB_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: mongodb
+                  key: database-name
+            - name: MONGO_HOST_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: mongodb
+                  key: host
+            - name: MONGO_INITDB_ROOT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb
+                  key: database-user
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb
+                  key: database-password
+            - name: GMAIL_USER_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: notification-secrets
+                  key: spring.mail.username
+            - name: GMAIL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: notification-secrets
+                  key: spring.mail.password
+          ports:
+            - containerPort: 8110

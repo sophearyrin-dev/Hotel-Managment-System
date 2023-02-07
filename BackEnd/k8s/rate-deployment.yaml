@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: rate-service
+  name: rate-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rate-service
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: rate-service
+    spec:
+      containers:
+      - image: xocbayar/rate-service
+        name: rate-service
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: rate-service
+  name: rate-service
+spec:
+  ports:
+  - name: 8099-8099
+    port: 8099
+    protocol: TCP
+    targetPort: 8099
+  selector:
+    app: rate-service
+  type: LoadBalancer
+status:
+  loadBalancer: {}

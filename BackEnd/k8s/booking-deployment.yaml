@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: booking-service
+  name: booking-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: booking-service
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: booking-service
+    spec:
+      containers:
+      - image: xocbayar/booking-service
+        name: booking-service
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: booking-service
+  name: booking-service
+spec:
+  ports:
+  - name: 8999-8999
+    port: 8999
+    protocol: TCP
+    targetPort: 8999
+  selector:
+    app: booking-service
+  type: LoadBalancer
+status:
+  loadBalancer: {}

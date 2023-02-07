@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: bankaccount-service
+  name: bankaccount-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bankaccount-service
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: bankaccount-service
+    spec:
+      containers:
+      - image: xocbayar/bankaccount-service
+        name: bankaccount-service
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: bankaccount-service
+  name: bankaccount-service
+spec:
+  ports:
+  - name: 9003-9003
+    port: 9003
+    protocol: TCP
+    targetPort: 9003
+  selector:
+    app: bankaccount-service
+  type: ClusterIP
+status:
+  loadBalancer: {}

@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: room-service
+  name: room-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: room-service
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: room-service
+    spec:
+      containers:
+      - image: xocbayar/room-service
+        name: room-service
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: room-service
+  name: room-service
+spec:
+  ports:
+  - name: 8088-8088
+    port: 8088
+    protocol: TCP
+    targetPort: 8088
+  selector:
+    app: room-service
+  type: LoadBalancer
+status:
+  loadBalancer: {}
