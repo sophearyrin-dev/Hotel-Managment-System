@@ -1,7 +1,7 @@
 # Hotel Management booking System
 
 Software architecture
-<img src="" />
+<img src="https://github.com/sophearyrin-dev/Hotel-Managment-System/blob/master/Architecture.png" />
 
 ## BackEnd
 ### Service
